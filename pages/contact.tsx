@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import BreadCrumb from "../components/BreadCrumb";
 import Footer from "../components/Footer";
+import HeadSection from "../components/HeadSection";
 import NavBar from "../components/NavBar";
 const Contact: NextPage = () => {
   return (
     <>
+    <HeadSection page="Contact" />
       <NavBar />
       <BreadCrumb path="Home / Contact" img="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
       <div className="py-12">

@@ -2,15 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import HeadSection from "../components/HeadSection";
 import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Wide Interiors</title>
-  
-      </Head>
+      <HeadSection page="Home" />
 
       {/* Head section  */}
       <header>

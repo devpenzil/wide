@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import BreadCrumb from "../components/BreadCrumb";
 import Footer from "../components/Footer";
+import HeadSection from "../components/HeadSection";
 import NavBar from "../components/NavBar";
 const Gallery: NextPage = () => {
     const images =[
@@ -16,6 +17,7 @@ const Gallery: NextPage = () => {
     ]
     return(
         <>
+        <HeadSection page="Gallery" />
         <NavBar />
         <BreadCrumb path="Home / Gallery" img="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
         <section>
