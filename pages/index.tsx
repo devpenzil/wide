@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
+import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
@@ -7,27 +9,28 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Wide Interiors</title>
+  
       </Head>
 
       {/* Head section  */}
       <header>
         <NavBar />
-        <div className="flex flex-col-reverse md:flex-row container justify-between mx-auto py-20 ">
+        <div className="flex flex-col-reverse md:flex-row p-2 container justify-between mx-auto py-20 ">
           <div>
-            <div className="font-black text-sm mt-4">
+            <div className="font-black text-sm mt-4 md:mt-0 text-center md:text-left ">
               AWARD WINNING INTERIOR DESIGN FIRM IN THE CITY​
             </div>
-            <div className="text-7xl mt-8 w-1/2 font-bold">
-              Im Kyle Mills, Interior Designer.
+            <div className="text-7xl mt-8 md:w-1/2 font-bold text-center md:text-left">
+              We make your Home beautifull
             </div>
-            <div className="w-1/2 mt-12 font-light">
+            <div className="md:w-1/2 text-center md:text-left mt-12 font-light">
               A descriptive paragraph that tells clients how good you are and
               proves that you are the best choice that they’ve made. This
               paragraph is also for those who are looking out for a reliable
               interior designer.
             </div>
-            <div className="mt-4 font-semibold text-lg hover:border-b-2 border-black cursor-pointer w-fit ">
-              Read More
+            <div className="mt-4 text-center md:text-left font-semibold text-lg cursor-pointer ">
+              <Link href={'/about'}>Read more</Link>
             </div>
           </div>
           <div className="flex justify-center items-center w-full md:w-1/2">
@@ -50,7 +53,7 @@ const Home: NextPage = () => {
       {/* Banner close  */}
 
       {/* Service  */}
-      <section className="h-96 my-20">
+      <section className=" my-20">
         <div className="container p-2 mx-auto">
           <div>
             <div className="text-4xl font-bold my-7">Services</div>
@@ -93,14 +96,14 @@ const Home: NextPage = () => {
       {/* Projects  */}
       <section>
         <div className="w-full bg-slate-100 py-12">
-          <div className="container mx-auto flex flex-col md:flex-row mt-8 justify-between items-center " >
+          <div className="container mx-auto flex flex-col md:flex-row mt-8 justify-between items-center p-2 " >
           <div className="w-full md:w-1/2 pr-8">
             <div className="text-4xl font-semibold mb-4">
               Projects
             </div>
           You can use a few enticing words and flaunt your capabilities that will attract future clients and encourage them to hire you right away.
           <div>
-          <button className="px-6 py-2 hover:scale-110 transition duration-300  border-2 border-black mt-6 rounded-full">
+          <button className="px-6 py-2 hover:scale-110 transition duration-300 mb-8  border-2 border-black mt-6 rounded-full">
             View all projects
           </button> 
           </div>
@@ -116,6 +119,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       {/* Projects close  */}
+      <Footer />
     </>
   );
 };
